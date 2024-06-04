@@ -17,25 +17,65 @@
   <body>
     <header>
       <p class="logo">Portfolio</p>
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-list-item">Projects</li>
-          <li class="nav-list-item">About</li>
-          <li class="nav-list-item">Contact</li>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <button><li class="header-nav-list-item">Projects</li></button>
+          <button><li class="header-nav-list-item">About</li></button>
+          <button><li class="header-nav-list-item">Contact</li></button>
         </ul>
       </nav>
+      <div class="hamburger-menu-container">
+        <input type="checkbox" id="hamburger-menu" />
+        <label for="hamburger-menu" class="open-menu">
+          <i class="fa-solid fa-bars" aria-label="Open menu"></i>
+        </label>
+        <label for="hamburger-menu" class="close-menu">
+          <i class="fa-solid fa-xmark" aria-label="Close menu"></i>
+        </label>
+        <nav class="sp-nav">
+          <ul class="nav-menu sp-nav-menu">
+            <button><li>Projects</li></button>
+            <button><li>About</li></button>
+            <button><li>Contact</li></button>
+          </ul>
+          <ul class="sp-sns-menu">
+            <a
+              href="https://www.linkedin.com/in/hikari-%C3%B8verby-957493241"
+              target="_blank"
+            >
+              <li class="footer-nav-list-item">Linkedin</li>
+            </a>
+            <a href="https://github.com/H-chai" target="_blank">
+              <li class="footer-nav-list-item">Github</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="main-visual">
-        <h1>Hi, I'm Hikari, a japanese frontend developer based in norway</h1>
+        <h1 class="heading-sp">
+          Hi, I'm <span class="name">Hikari</span>, a japanese
+          <br />
+          frontend developer
+          <br />
+          based in norway
+        </h1>
+        <h1 class="heading-pc">
+          Hi, I'm <span class="name">Hikari</span>, a japanese frontend
+          developer based in norway
+        </h1>
+        <img
+          src="images/profile.jpg"
+          alt="my profile picture"
+          class="profile-img"
+        />
         <div class="main-visual-bottom">
-          <h2>Open to work<i class="fa-solid fa-face-smile"></i></h2>
-          <img
-            src="images/profile@2x.png"
-            alt="my profile picture"
-            class="profile-img"
-          />
+          <div class="open-to-work">
+            <h2>Open to work</h2>
+            <i class="fa-solid fa-face-smile fa-spin"></i>
+          </div>
         </div>
       </section>
 

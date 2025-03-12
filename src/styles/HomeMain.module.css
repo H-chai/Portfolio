@@ -1,0 +1,124 @@
+.mainVisual {
+  height: calc(100vh - 72px);
+  padding-right: 16px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainTop {
+  margin-top: -72px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 10vw;
+  font-weight: 300;
+  line-height: 1.2;
+  position: relative;
+  background-color: transparent;
+
+  span {
+    font-size: 10vw;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+.profileImage {
+  width: 40vw;
+  min-width: 180px;
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-top: -7vh;
+}
+
+.mainBottom {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainBottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+.scrollDown {
+  animation: 12s linear infinite rotation;
+  background-color: transparent;
+}
+
+@keyframes rotation{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg); }
+}
+
+@media screen and (min-width: 580px) and (max-width: 768px) {
+
+  h1 {
+    font-size: 8vw;
+    line-height: 1.1;
+
+    span {
+      font-size: 8vw;
+      list-style: 1.1;
+    }
+  }
+
+}
+
+@media screen and (min-width:768px) {
+  h1 {
+    font-size: 6vw;
+
+    span {
+      font-size: 6vw;
+    }
+  }
+}
+
+@media screen and (min-width:821px) {
+  .mainVisual {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  .mainTop {
+    margin-top: -104px;
+  }
+
+  .profileImage {
+    margin-top: -16vh;
+  }
+
+  .mainBottom {
+    bottom: 16px;
+    right: 80px;
+    left: 80px;
+  }
+
+  .mainBottomLeft {
+    gap: 8px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .smileIcon {
+      font-size: 28px;
+    }
+  }
+}

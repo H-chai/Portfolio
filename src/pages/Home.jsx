@@ -7,26 +7,36 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from 'react-router-dom';
+import mainStyles from '../styles/HomeMain.module.css';
+import Profile from '../assets/profile.svg';
 
 export function Home() {
   return (
     <div>
-      <section>
-        <div>
+      <section className={mainStyles.mainVisual}>
+        <div className={mainStyles.mainTop}>
           <h1>
-            hi, I’m Hikari,
-            <span>a japanese </span>
-            <br />
-            <span>frontend developer </span>
-            based in norway
+            hi, I’m <span>Hikari</span>, a japanese frontend developer based in
+            norway
           </h1>
+          <img
+            src={Profile}
+            alt="profile image"
+            className={mainStyles.profileImage}
+          />
         </div>
-        <div>
-          <div>
+        <div className={mainStyles.mainBottom}>
+          <div className={mainStyles.mainBottomLeft}>
             <h2>Open to work</h2>
-            <SentimentSatisfiedAltIcon></SentimentSatisfiedAltIcon>
+            <SentimentSatisfiedAltIcon
+              className={mainStyles.smileIcon}
+            ></SentimentSatisfiedAltIcon>
           </div>
-          <img src={scrollDown} alt="circle" />
+          <img
+            src={scrollDown}
+            alt="circle"
+            className={mainStyles.scrollDown}
+          />
         </div>
       </section>
       <section>

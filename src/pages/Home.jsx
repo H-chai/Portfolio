@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import scrollDown from '../assets/scrolldown.svg';
 import eCom from '../assets/eCom.svg';
 import CrediBid from '../assets/CrediBid.svg';
@@ -9,11 +9,34 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from 'react-router-dom';
 import mainStyles from '../styles/HomeMain.module.css';
+import projectStyles from '../styles/HomeProject.module.css';
 import Profile from '../assets/profile.svg';
 
 export function Home() {
   const headingText =
     'hi, I’m Hikari, a japanese frontend developer based in norway';
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  const projectRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(entry.isIntersecting);
+      },
+      { threshold: 0.3 }
+    );
+
+    if (projectRef.current) {
+      observer.observe(projectRef.current);
+    }
+
+    return () => {
+      if (projectRef.current) {
+        observer.unobserve(projectRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div>
@@ -52,7 +75,10 @@ export function Home() {
           />
         </div>
       </section>
-      <section>
+      <section
+        ref={projectRef}
+        className={`${projectStyles.projectSection} ${isScrolled ? projectStyles.scrolled : ''}`}
+      >
         <h2>Selected Projects</h2>
         <ul>
           <li>

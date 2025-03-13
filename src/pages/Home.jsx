@@ -5,12 +5,14 @@ import CrediBid from '../assets/CrediBid.svg';
 import Postlyfe from '../assets/Postlyfe.svg';
 import ScienceMuseum from '../assets/ScienceMuseum.svg';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+/* import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub'; */
 import { Link } from 'react-router-dom';
 import mainStyles from '../styles/HomeMain.module.css';
 import projectStyles from '../styles/HomeProject.module.css';
+import contactStyles from '../styles/HomeContact.module.css';
 import Profile from '../assets/profile.svg';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 export function Home() {
   const headingText =
@@ -75,90 +77,92 @@ export function Home() {
           />
         </div>
       </section>
-      <section
-        ref={projectRef}
-        className={`${projectStyles.projectSection} ${isScrolled ? projectStyles.scrolled : ''}`}
-      >
-        <h2>Selected Projects</h2>
-        <ul className={projectStyles.projectList}>
-          <li>
-            <Link className={projectStyles.projectLink}>
-              <p className={projectStyles.projectTitle}>eCom</p>
-              <img
-                src={eCom}
-                alt="eCom mockup image"
-                className={projectStyles.projectImage}
-              />
-            </Link>
-          </li>
-          <li>
-            <Link className={projectStyles.projectLink}>
-              <p className={projectStyles.projectTitle}>CrediBid</p>
-              <img
-                src={CrediBid}
-                alt="CrediBid mockup image"
-                className={projectStyles.projectImage}
-              />
-            </Link>
-          </li>
-          <li>
-            <Link className={projectStyles.projectLink}>
-              <p className={projectStyles.projectTitle}>Postlyfe</p>
-              <img
-                src={Postlyfe}
-                alt="Postlyfe mockup image"
-                className={projectStyles.projectImage}
-              />
-            </Link>
-          </li>
-          <li>
-            <Link className={projectStyles.projectLink}>
-              <p className={projectStyles.projectTitle}>
-                Community Science Museum
-              </p>
-              <img
-                src={ScienceMuseum}
-                alt="ScienceMuseum mockup image"
-                className={projectStyles.projectImage}
-              />
-            </Link>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <div>
-          <h2>Get in touch</h2>
-        </div>
-        <div>
-          <div>
-            <h3>Navigation</h3>
-            <nav>
-              <ul>
-                <li>PROJECTS</li>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
-              </ul>
-            </nav>
+      <div ref={projectRef}>
+        <section
+          className={`${projectStyles.projectSection} ${isScrolled ? projectStyles.scrolled : ''}`}
+        >
+          <h2>Selected Projects</h2>
+          <ul className={projectStyles.projectList}>
+            <li>
+              <Link className={projectStyles.projectLink}>
+                <p className={projectStyles.projectTitle}>eCom</p>
+                <img
+                  src={eCom}
+                  alt="eCom mockup image"
+                  className={projectStyles.projectImage}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link className={projectStyles.projectLink}>
+                <p className={projectStyles.projectTitle}>CrediBid</p>
+                <img
+                  src={CrediBid}
+                  alt="CrediBid mockup image"
+                  className={projectStyles.projectImage}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link className={projectStyles.projectLink}>
+                <p className={projectStyles.projectTitle}>Postlyfe</p>
+                <img
+                  src={Postlyfe}
+                  alt="Postlyfe mockup image"
+                  className={projectStyles.projectImage}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link className={projectStyles.projectLink}>
+                <p className={projectStyles.projectTitle}>
+                  Community Science Museum
+                </p>
+                <img
+                  src={ScienceMuseum}
+                  alt="ScienceMuseum mockup image"
+                  className={projectStyles.projectImage}
+                />
+              </Link>
+            </li>
+          </ul>
+        </section>
+        <section className={contactStyles.contactSection}>
+          <Link className={contactStyles.mail}>
+            <h2 className={contactStyles.contactHeading}>Get in touch</h2>
+            <ArrowOutwardIcon></ArrowOutwardIcon>
+          </Link>
+          <div className={contactStyles.contactBottom}>
+            <div>
+              <h3 className={contactStyles.contactBottomTitle}>Navigation</h3>
+              <nav>
+                <ul>
+                  <li className={contactStyles.contactNavListItem}>PROJECTS</li>
+                  <li className={contactStyles.contactNavListItem}>ABOUT</li>
+                  <li className={contactStyles.contactNavListItem}>CONTACT</li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <h3 className={contactStyles.contactBottomTitle}>Social</h3>
+              <nav>
+                <ul>
+                  <li>
+                    <Link>
+                      Linkedin<ArrowOutwardIcon></ArrowOutwardIcon>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link>
+                      Github<ArrowOutwardIcon></ArrowOutwardIcon>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-          <div>
-            <h3>Social</h3>
-            <nav>
-              <ul>
-                <li>
-                  <Link>
-                    Linkedin<LinkedInIcon></LinkedInIcon>
-                  </Link>
-                </li>
-                <li>
-                  <Link>
-                    Github<GitHubIcon></GitHubIcon>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }

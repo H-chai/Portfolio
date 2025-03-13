@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import scrollDown from '../assets/scrolldown.svg';
 import eCom from '../assets/eCom.svg';
 import CrediBid from '../assets/CrediBid.svg';
@@ -11,13 +12,25 @@ import mainStyles from '../styles/HomeMain.module.css';
 import Profile from '../assets/profile.svg';
 
 export function Home() {
+  const headingText =
+    'hi, I’m Hikari, a japanese frontend developer based in norway';
+
   return (
     <div>
       <section className={mainStyles.mainVisual}>
         <div className={mainStyles.mainTop}>
           <h1>
-            hi, I’m <span>Hikari</span>, a japanese frontend developer based in
-            norway
+            {headingText.split('').map((char, index) => (
+              <span
+                key={index}
+                className={`${mainStyles.fadeIn} ${
+                  index >= 8 && index <= 13 ? mainStyles.highlight : ''
+                }`}
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                {char}
+              </span>
+            ))}
           </h1>
           <img
             src={Profile}

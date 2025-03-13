@@ -13,16 +13,29 @@
 
 h1 {
   text-transform: uppercase;
-  font-size: 10vw;
   font-weight: 300;
-  line-height: 1.2;
   position: relative;
   background-color: transparent;
+}
 
-  span {
-    font-size: 10vw;
-    font-weight: 300;
-    line-height: 1.2;
+.fadeIn {
+  font-size: 10vw;
+  line-height: 1.2;
+  background-color: transparent;
+  opacity: 0;
+  animation: fadeIn .5s ease-in forwards;
+}
+
+.highlight {
+  color: #CE3C3C;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -68,26 +81,18 @@ h1 {
 
 @media screen and (min-width: 580px) and (max-width: 768px) {
 
-  h1 {
+  .fadeIn {
     font-size: 8vw;
     line-height: 1.1;
-
-    span {
-      font-size: 8vw;
-      list-style: 1.1;
-    }
   }
 
 }
 
 @media screen and (min-width:768px) {
-  h1 {
+  .fadeIn {
     font-size: 6vw;
-
-    span {
-      font-size: 6vw;
-    }
   }
+
 }
 
 @media screen and (min-width:821px) {

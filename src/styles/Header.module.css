@@ -25,7 +25,7 @@ header {
   z-index: 1;
   transform: translateY(-100%);
   transition: transform .8s ease-in-out;
-  background-color: #fff;
+  background-color: #111;
 
   ul {
     display: flex;
@@ -38,6 +38,7 @@ header {
 
   li {
     font-size: 32px;
+    color: white;
   }
 }
 
@@ -50,6 +51,10 @@ header {
   align-items: center;
   background-color: transparent;
   color: #333;
+}
+
+.colorWhite {
+  color: white;
 }
 
 .open {

@@ -12,7 +12,11 @@ export function Header() {
 
   return (
     <header>
-      <div className={styles.pageTitle}>HØ</div>
+      <div
+        className={`${styles.pageTitle} ${isMenuOpen ? styles.colorWhite : ''}`}
+      >
+        HØ
+      </div>
       <nav className={styles.navMenu}>
         <ul className={styles.navMenuList}>
           <li>PROJECTS</li>
@@ -23,7 +27,7 @@ export function Header() {
       {isMenuOpen ? (
         <div>
           <button onClick={toggleMenuButton} className={styles.toggleIcon}>
-            <CloseIcon></CloseIcon>
+            <CloseIcon className={styles.colorWhite}></CloseIcon>
           </button>
         </div>
       ) : (

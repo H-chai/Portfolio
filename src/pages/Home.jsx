@@ -5,14 +5,13 @@ import CrediBid from '../assets/CrediBid.svg';
 import Postlyfe from '../assets/Postlyfe.svg';
 import ScienceMuseum from '../assets/ScienceMuseum.svg';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-/* import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub'; */
 import { Link } from 'react-router-dom';
 import mainStyles from '../styles/HomeMain.module.css';
 import projectStyles from '../styles/HomeProject.module.css';
 import contactStyles from '../styles/HomeContact.module.css';
 import Profile from '../assets/profile.svg';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { useScroll } from '../contexts/ScrollContext';
 
 export function Home() {
   const headingText =
@@ -39,6 +38,13 @@ export function Home() {
       }
     };
   }, []);
+
+  const {
+    projectSectionRef,
+    contactSectionRef,
+    scrollToProjects,
+    scrollToContact,
+  } = useScroll();
 
   return (
     <div>
@@ -79,6 +85,7 @@ export function Home() {
       </section>
       <div ref={projectRef}>
         <section
+          ref={projectSectionRef}
           className={`${projectStyles.projectSection} ${isScrolled ? projectStyles.scrolled : ''}`}
         >
           <h2>Selected Projects</h2>
@@ -127,8 +134,14 @@ export function Home() {
             </li>
           </ul>
         </section>
-        <section className={contactStyles.contactSection}>
-          <Link className={contactStyles.mail}>
+        <section
+          className={contactStyles.contactSection}
+          ref={contactSectionRef}
+        >
+          <Link
+            className={contactStyles.mail}
+            to="mailto:overby.hikari@gmail.com"
+          >
             <h2 className={contactStyles.contactHeading}>Get in touch</h2>
             <ArrowOutwardIcon></ArrowOutwardIcon>
           </Link>
@@ -137,9 +150,19 @@ export function Home() {
               <h3 className={contactStyles.contactBottomTitle}>Navigation</h3>
               <nav>
                 <ul>
-                  <li className={contactStyles.contactNavListItem}>PROJECTS</li>
+                  <li
+                    className={contactStyles.contactNavListItem}
+                    onClick={scrollToProjects}
+                  >
+                    PROJECTS
+                  </li>
                   <li className={contactStyles.contactNavListItem}>ABOUT</li>
-                  <li className={contactStyles.contactNavListItem}>CONTACT</li>
+                  <li
+                    className={contactStyles.contactNavListItem}
+                    onClick={scrollToContact}
+                  >
+                    CONTACT
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -148,12 +171,15 @@ export function Home() {
               <nav>
                 <ul>
                   <li>
-                    <Link>
+                    <Link
+                      to="https://www.linkedin.com/in/hikari-%C3%B8verby-957493241/"
+                      target="_blank"
+                    >
                       Linkedin<ArrowOutwardIcon></ArrowOutwardIcon>
                     </Link>
                   </li>
                   <li>
-                    <Link>
+                    <Link to="https://github.com/H-chai" target="_blank">
                       Github<ArrowOutwardIcon></ArrowOutwardIcon>
                     </Link>
                   </li>

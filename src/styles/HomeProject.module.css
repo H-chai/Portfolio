@@ -1,5 +1,5 @@
 .projectSection {
-  transition: all 0.7s ease-in-out;
+  transition: all .4s ease-in-out;
   background-color: white;
   color: #333;
   padding: 48px 16px;

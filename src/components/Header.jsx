@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '../styles/Header.module.css';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseIcon from '@mui/icons-material/Close';
+import { useScroll } from '../contexts/ScrollContext';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,8 @@ export function Header() {
   function toggleMenuButton() {
     setIsMenuOpen((prev) => !prev);
   }
+
+  const { scrollToProjects, scrollToContact } = useScroll();
 
   return (
     <header>
@@ -19,9 +22,9 @@ export function Header() {
       </div>
       <nav className={styles.navMenu}>
         <ul className={styles.navMenuList}>
-          <li>PROJECTS</li>
+          <li onClick={scrollToProjects}>PROJECTS</li>
           <li>ABOUT</li>
-          <li>CONTACT</li>
+          <li onClick={scrollToContact}>CONTACT</li>
         </ul>
       </nav>
       {isMenuOpen ? (

@@ -80,30 +80,48 @@ export function Home() {
         className={`${projectStyles.projectSection} ${isScrolled ? projectStyles.scrolled : ''}`}
       >
         <h2>Selected Projects</h2>
-        <ul>
+        <ul className={projectStyles.projectList}>
           <li>
-            <Link>
-              <p>eCom</p>
-              <img src={eCom} alt="eCom mockup image" />
+            <Link className={projectStyles.projectLink}>
+              <p className={projectStyles.projectTitle}>eCom</p>
+              <img
+                src={eCom}
+                alt="eCom mockup image"
+                className={projectStyles.projectImage}
+              />
             </Link>
           </li>
           <li>
-            <Link>
-              <p>CrediBid</p>
+            <Link className={projectStyles.projectLink}>
+              <p className={projectStyles.projectTitle}>CrediBid</p>
+              <img
+                src={CrediBid}
+                alt="CrediBid mockup image"
+                className={projectStyles.projectImage}
+              />
             </Link>
-            <img src={CrediBid} alt="CrediBid mockup image" />
           </li>
           <li>
-            <Link>
-              <p>Postlyfe</p>
+            <Link className={projectStyles.projectLink}>
+              <p className={projectStyles.projectTitle}>Postlyfe</p>
+              <img
+                src={Postlyfe}
+                alt="Postlyfe mockup image"
+                className={projectStyles.projectImage}
+              />
             </Link>
-            <img src={Postlyfe} alt="Postlyfe mockup image" />
           </li>
           <li>
-            <Link>
-              <p>Community Science Museum</p>
+            <Link className={projectStyles.projectLink}>
+              <p className={projectStyles.projectTitle}>
+                Community Science Museum
+              </p>
+              <img
+                src={ScienceMuseum}
+                alt="ScienceMuseum mockup image"
+                className={projectStyles.projectImage}
+              />
             </Link>
-            <img src={ScienceMuseum} alt="ScienceMuseum mockup image" />
           </li>
         </ul>
       </section>

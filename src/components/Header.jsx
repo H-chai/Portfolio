@@ -39,6 +39,7 @@ export function Header() {
       <Link
         className={`${styles.pageTitle} ${isMenuOpen ? styles.colorWhite : ''}`}
         to="/"
+        onClick={`${isMenuOpen ? toggleMenuButton : ''}`}
       >
         HØ
       </Link>

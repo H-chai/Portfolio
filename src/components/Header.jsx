@@ -3,6 +3,7 @@ import styles from '../styles/Header.module.css';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import { useScroll } from '../contexts/ScrollContext';
+import { Link } from 'react-router-dom';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,11 +16,12 @@ export function Header() {
 
   return (
     <header>
-      <div
+      <Link
         className={`${styles.pageTitle} ${isMenuOpen ? styles.colorWhite : ''}`}
+        to="/"
       >
         HØ
-      </div>
+      </Link>
       <nav className={styles.navMenu}>
         <ul className={styles.navMenuList}>
           <li onClick={scrollToProjects}>PROJECTS</li>

@@ -10,6 +10,9 @@ header {
   position: relative;
   z-index: 2;
   font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .navMenu {

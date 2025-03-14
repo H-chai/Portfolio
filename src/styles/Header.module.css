@@ -51,6 +51,7 @@ header {
   align-items: center;
   background-color: transparent;
   color: #333;
+  cursor: pointer;
 }
 
 .colorWhite {

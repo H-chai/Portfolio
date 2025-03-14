@@ -14,6 +14,26 @@ export function Header() {
 
   const { scrollToProjects, scrollToContact } = useScroll();
 
+  const handleScrollToProjects = () => {
+    if (location.pathname === '/') {
+      scrollToProjects();
+      toggleMenuButton();
+    } else {
+      window.location.href = '/?home=projects';
+      toggleMenuButton();
+    }
+  };
+
+  const handleScrollToContact = () => {
+    if (location.pathname === '/') {
+      scrollToContact();
+      toggleMenuButton();
+    } else {
+      window.location.href = '/?home=contact';
+      toggleMenuButton();
+    }
+  };
+
   return (
     <header>
       <Link
@@ -24,9 +44,9 @@ export function Header() {
       </Link>
       <nav className={styles.navMenu}>
         <ul className={styles.navMenuList}>
-          <li onClick={scrollToProjects}>PROJECTS</li>
+          <li onClick={handleScrollToProjects}>PROJECTS</li>
           <li>ABOUT</li>
-          <li onClick={scrollToContact}>CONTACT</li>
+          <li onClick={handleScrollToContact}>CONTACT</li>
         </ul>
       </nav>
       {isMenuOpen ? (
@@ -44,9 +64,9 @@ export function Header() {
         className={`${styles.navResponsive} ${isMenuOpen ? styles.open : ''}`}
       >
         <ul>
-          <li>PROJECTS</li>
+          <li onClick={handleScrollToProjects}>PROJECTS</li>
           <li>ABOUT</li>
-          <li>CONTACT</li>
+          <li onClick={handleScrollToContact}>CONTACT</li>
         </ul>
       </nav>
     </header>

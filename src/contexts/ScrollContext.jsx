@@ -1,10 +1,12 @@
-import { createContext, useContext, useRef } from 'react';
+import { createContext, useContext, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const ScrollContext = createContext(null);
 
 export function ScrollProvider({ children }) {
   const projectSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
+  const location = useLocation();
 
   const scrollToProjects = () => {
     if (projectSectionRef.current) {
@@ -23,6 +25,18 @@ export function ScrollProvider({ children }) {
       });
     }
   };
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      setTimeout(() => {
+        if (location.state.scrollTo === 'projects') {
+          scrollToProjects();
+        } else if (location.state.scrollTo === 'contact') {
+          scrollToContact();
+        }
+      }, 300);
+    }
+  }, [location]);
 
   return (
     <ScrollContext.Provider

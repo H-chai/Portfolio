@@ -39,6 +39,17 @@ export function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const scrollTo = params.get('home');
+
+    if (scrollTo === 'projects') {
+      scrollToProjects();
+    } else if (scrollTo === 'contact') {
+      scrollToContact();
+    }
+  }, [location]);
+
   const {
     projectSectionRef,
     contactSectionRef,
@@ -91,7 +102,7 @@ export function Home() {
           <h2>Selected Projects</h2>
           <ul className={projectStyles.projectList}>
             <li>
-              <Link className={projectStyles.projectLink}>
+              <Link className={projectStyles.projectLink} to="/project/1">
                 <p className={projectStyles.projectTitle}>eCom</p>
                 <img
                   src={eCom}
@@ -101,7 +112,7 @@ export function Home() {
               </Link>
             </li>
             <li>
-              <Link className={projectStyles.projectLink}>
+              <Link className={projectStyles.projectLink} to="/project/2">
                 <p className={projectStyles.projectTitle}>CrediBid</p>
                 <img
                   src={CrediBid}
@@ -111,7 +122,7 @@ export function Home() {
               </Link>
             </li>
             <li>
-              <Link className={projectStyles.projectLink}>
+              <Link className={projectStyles.projectLink} to="/project/3">
                 <p className={projectStyles.projectTitle}>Postlyfe</p>
                 <img
                   src={Postlyfe}
@@ -121,7 +132,7 @@ export function Home() {
               </Link>
             </li>
             <li>
-              <Link className={projectStyles.projectLink}>
+              <Link className={projectStyles.projectLink} to="/project/4">
                 <p className={projectStyles.projectTitle}>
                   Community Science Museum
                 </p>

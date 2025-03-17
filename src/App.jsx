@@ -3,10 +3,12 @@ import '../src/styles/global.css';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Project } from './pages/Project';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />

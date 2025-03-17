@@ -17,7 +17,9 @@ export function Header() {
   const handleScrollToProjects = () => {
     if (location.pathname === '/') {
       scrollToProjects();
-      toggleMenuButton();
+      if (isMenuOpen) {
+        toggleMenuButton();
+      }
     } else {
       window.location.href = '/?home=projects';
       toggleMenuButton();
@@ -27,7 +29,9 @@ export function Header() {
   const handleScrollToContact = () => {
     if (location.pathname === '/') {
       scrollToContact();
-      toggleMenuButton();
+      if (isMenuOpen) {
+        toggleMenuButton();
+      }
     } else {
       window.location.href = '/?home=contact';
       toggleMenuButton();
@@ -51,11 +55,9 @@ export function Header() {
         </ul>
       </nav>
       {isMenuOpen ? (
-        <div>
-          <button onClick={toggleMenuButton} className={styles.toggleIcon}>
-            <CloseIcon className={styles.colorWhite}></CloseIcon>
-          </button>
-        </div>
+        <button onClick={toggleMenuButton} className={styles.toggleIcon}>
+          <CloseIcon className={styles.colorWhite}></CloseIcon>
+        </button>
       ) : (
         <button onClick={toggleMenuButton} className={styles.toggleIcon}>
           <MenuOutlinedIcon></MenuOutlinedIcon>

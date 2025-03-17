@@ -50,18 +50,60 @@
 
 .imageContainer {
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
   gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
 
   img {
     width: 100%;
+  }
+
+  .image:nth-child(-n+3){
+    grid-column: 1 / 3;
+  }
+}
+
+.backHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  margin-top: 64px;
+
+  svg {
+    width: 16px;
+  }
+
+  p {
+    margin-left: 8px;
+  }
+}
+
+@media screen and (min-width:821px) {
+  .projectPage {
+    padding: 72px 80px 48px 80px;
+  }
+
+  .projectTitle {
+    font-size: 8vw;
+  }
+
+  .imageContainer {
+    margin-top: 80px;
+  }
+
+  .backHome {
+    margin-top: 72px;
   }
 }
 
 @media screen and (min-width:1024px) {
   .projectPage {
-    padding: 96px 80px;
+    padding: 96px 80px 72px 80px;
+  }
+
+  .projectContainer {
     display: flex;
   }
 
@@ -88,11 +130,10 @@
     width: 50%;
     margin-left: auto;
     margin-top: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0px, 1fr));
   }
 
-  .image:nth-child(-n+3){
-    grid-column: 1 / 3;
+  .backHome {
+    justify-content: flex-start;
+    margin-top: 96px;
   }
 }

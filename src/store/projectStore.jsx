@@ -14,6 +14,7 @@ export const useStore = create(() => ({
         'Fetch API (Data Fetching)',
       ],
       year: '2025',
+      url: 'https://reactecom-project.netlify.app/',
       medias: [
         {
           url: '/src/assets/eCom-fullScreen.jpg',
@@ -50,6 +51,7 @@ export const useStore = create(() => ({
         'Fetch API (Data Fetching)',
       ],
       year: '2024',
+      url: 'https://credibid-auction.netlify.app/',
       medias: [
         {
           url: '/src/assets/CrediBid-fullScreen.jpg',
@@ -87,6 +89,7 @@ export const useStore = create(() => ({
         'localStorage for toke storage',
       ],
       year: '2024',
+      url: 'https://postlyfe.netlify.app/',
       medias: [
         {
           url: '/src/assets/Postlyfe-fullScreen.jpg',
@@ -117,6 +120,7 @@ export const useStore = create(() => ({
       tags: ['front-end', 'design'],
       technologies: ['Design (Figma)', 'HTML', 'CSS (Tailwind)'],
       year: '2023',
+      url: 'https://h-chai.github.io/Semester-Project-1/',
       medias: [
         {
           url: '/src/assets/CommunityScienceMuseum.jpg',

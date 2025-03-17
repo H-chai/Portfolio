@@ -3,6 +3,7 @@ import { useStore } from '../store/projectStore';
 import styles from '../styles/Project.module.css';
 import { Link } from 'react-router-dom';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 export function Project() {
   const { id } = useParams();
@@ -42,6 +43,15 @@ export function Project() {
             <li className={styles.listItem}>
               <p className={styles.listTitle}>Year</p>
               <p className={styles.listContent}>{project.year}</p>
+            </li>
+            <li className={styles.demoSite}>
+              <Link
+                to={project.url}
+                className={styles.demoSiteText}
+                target="_blank"
+              >
+                Go to website<ArrowOutwardIcon></ArrowOutwardIcon>
+              </Link>
             </li>
           </ul>
         </div>

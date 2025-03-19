@@ -67,6 +67,11 @@ export const useStore = create(() => ({
         'Fetch API (Data Fetching)',
       ],
       year: '2024',
+      registration: {
+        username: 'demo_user_1',
+        email: 'demo_user_1@stud.noroff.no',
+        password: 'Password123',
+      },
       url: 'https://credibid-auction.netlify.app/',
       medias: [
         {
@@ -105,6 +110,11 @@ export const useStore = create(() => ({
         'localStorage for toke storage',
       ],
       year: '2024',
+      registration: {
+        username: 'demo_user_1',
+        email: 'demo_user_1@stud.noroff.no',
+        password: 'Password123',
+      },
       url: 'https://postlyfe.netlify.app/',
       medias: [
         {

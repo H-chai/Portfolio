@@ -44,6 +44,31 @@ export function Project() {
               <p className={styles.listTitle}>Year</p>
               <p className={styles.listContent}>{project.year}</p>
             </li>
+            {project.registration ? (
+              <li className={styles.listItem}>
+                <p className={styles.listTitle}>Demo account</p>
+                <p className={styles.listContent}>
+                  You can use the following demo account to log in and try out
+                  the features of the site.
+                </p>
+                <div className={styles.registerInfo}>
+                  <p>
+                    <span>Username:</span>
+                    {project.registration.username}
+                  </p>
+                  <p>
+                    <span>Email:</span>
+                    {project.registration.email}
+                  </p>
+                  <p>
+                    <span>Password:</span>
+                    {project.registration.password}
+                  </p>
+                </div>
+              </li>
+            ) : (
+              ''
+            )}
             <li className={styles.demoSite}>
               <Link
                 to={project.url}

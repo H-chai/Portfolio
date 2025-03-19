@@ -48,6 +48,18 @@
   line-height: 1.5;
 }
 
+.registerInfo {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  span {
+    font-weight: 500;
+    margin-right: 6px;
+  }
+}
+
 .demoSite {
   display: flex;
   align-items: center;

@@ -17,23 +17,23 @@ export const useStore = create(() => ({
       url: 'https://reactecom-project.netlify.app/',
       medias: [
         {
-          url: '/assets/eCom-fullScreen.jpg',
+          url: '/public/assets/eCom-fullScreen.jpg',
           alt: 'eCom home',
         },
         {
-          url: '/assets/eCom-product.jpg',
+          url: '/public/assets/eCom-product.jpg',
           alt: 'eCom product page',
         },
         {
-          url: '/assets/eCom-cart.jpg',
+          url: '/public/assets/eCom-cart.jpg',
           alt: 'eCom cart page',
         },
         {
-          url: '/assets/eCom-product-responsive.jpg',
+          url: '/public/assets/eCom-product-responsive.jpg',
           alt: 'eCom mobile product page',
         },
         {
-          url: '/assets/eCom-cart-responsive.jpg',
+          url: '/public/assets/eCom-cart-responsive.jpg',
           alt: 'eCom mobile cart page',
         },
       ],
@@ -54,23 +54,23 @@ export const useStore = create(() => ({
       url: 'https://credibid-auction.netlify.app/',
       medias: [
         {
-          url: '/assets/CrediBid-fullScreen.jpg',
+          url: '/public/assets/CrediBid-fullScreen.jpg',
           alt: 'CrediBid home',
         },
         {
-          url: '/assets/CrediBid-listing.jpg',
+          url: '/public/assets/CrediBid-listing.jpg',
           alt: 'CrediBid listing page',
         },
         {
-          url: '/assets/CrediBid-profile.jpg',
+          url: '/public/assets/CrediBid-profile.jpg',
           alt: 'CrediBid profile page',
         },
         {
-          url: '/assets/CrediBid-listing-responsive.jpg',
+          url: '/public/assets/CrediBid-listing-responsive.jpg',
           alt: 'CrediBid mobile listing page',
         },
         {
-          url: '/assets/CrediBid-create-page-responsive.jpg',
+          url: '/public/assets/CrediBid-create-page-responsive.jpg',
           alt: 'eCom mobile create listing page',
         },
       ],
@@ -92,23 +92,23 @@ export const useStore = create(() => ({
       url: 'https://postlyfe.netlify.app/',
       medias: [
         {
-          url: '/assets/Postlyfe-fullScreen.jpg',
+          url: '/public/assets/Postlyfe-fullScreen.jpg',
           alt: 'Postlyfe home',
         },
         {
-          url: '/assets/Postlyfe-profile.jpg',
+          url: '/public/assets/Postlyfe-profile.jpg',
           alt: 'Postlyfe profile page',
         },
         {
-          url: '/assets/Postlyfe-create.jpg',
+          url: '/public/assets/Postlyfe-create.jpg',
           alt: 'Postlyfe create page',
         },
         {
-          url: '/assets/Postlyfe-login-responsive.jpg',
+          url: '/public/assets/Postlyfe-login-responsive.jpg',
           alt: 'Postlyfe mobile login page',
         },
         {
-          url: '/assets/Postlyfe-post-responsive.jpg',
+          url: '/public/assets/Postlyfe-post-responsive.jpg',
           alt: 'Postlyfe mobile post page',
         },
       ],
@@ -123,7 +123,7 @@ export const useStore = create(() => ({
       url: 'https://h-chai.github.io/Semester-Project-1/',
       medias: [
         {
-          url: '/assets/CommunityScienceMuseum.jpg',
+          url: '/public/assets/CommunityScienceMuseum.jpg',
           alt: 'Community Science Museum',
         },
       ],

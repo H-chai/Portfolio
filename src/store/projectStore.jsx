@@ -1,5 +1,20 @@
 import { create } from 'zustand';
 import eComFullScreen from '../../public/assets/eCom-fullScreen.jpg';
+import eComProductPage from '../../public/assets/eCom-product.jpg';
+import eComCartPage from '../../public/assets/eCom-cart.jpg';
+import eComProductResponsive from '../../public/assets/eCom-product-responsive.jpg';
+import eComCartResponsive from '../../public/assets/eCom-cart-responsive.jpg';
+import CrediBidFullScreen from '../../public/assets/CrediBid-fullScreen.jpg';
+import CrediBidListing from '../../public/assets/CrediBid-listing.jpg';
+import CrediBidProfile from '../../public/assets/CrediBid-profile.jpg';
+import CrediBidListingResponsive from '../../public/assets/CrediBid-listing-responsive.jpg';
+import CrediBidCreateResponsive from '../../public/assets/CrediBid-create-page-responsive.jpg';
+import PostlyfeFullScrenn from '../../public/assets/Postlyfe-fullScreen.jpg';
+import PostlyfeProfile from '../../public/assets/Postlyfe-profile.jpg';
+import PostlyfeCreate from '../../public/assets/Postlyfe-create.jpg';
+import PostlyfeLoginResponsive from '../../public/assets/Postlyfe-login-responsive.jpg';
+import PostlyfePostResponsive from '../../public/assets/Postlyfe-post-responsive.jpg';
+import CommunityScienceMuseum from '../../public/assets/CommunityScienceMuseum.jpg';
 
 export const useStore = create(() => ({
   projects: [
@@ -22,19 +37,19 @@ export const useStore = create(() => ({
           alt: 'eCom home',
         },
         {
-          url: '/public/assets/eCom-product.jpg',
+          url: eComProductPage,
           alt: 'eCom product page',
         },
         {
-          url: '/public/assets/eCom-cart.jpg',
+          url: eComCartPage,
           alt: 'eCom cart page',
         },
         {
-          url: '/public/assets/eCom-product-responsive.jpg',
+          url: eComProductResponsive,
           alt: 'eCom mobile product page',
         },
         {
-          url: '/public/assets/eCom-cart-responsive.jpg',
+          url: eComCartResponsive,
           alt: 'eCom mobile cart page',
         },
       ],
@@ -55,23 +70,23 @@ export const useStore = create(() => ({
       url: 'https://credibid-auction.netlify.app/',
       medias: [
         {
-          url: '/public/assets/CrediBid-fullScreen.jpg',
+          url: CrediBidFullScreen,
           alt: 'CrediBid home',
         },
         {
-          url: '/public/assets/CrediBid-listing.jpg',
+          url: CrediBidListing,
           alt: 'CrediBid listing page',
         },
         {
-          url: '/public/assets/CrediBid-profile.jpg',
+          url: CrediBidProfile,
           alt: 'CrediBid profile page',
         },
         {
-          url: '/public/assets/CrediBid-listing-responsive.jpg',
+          url: CrediBidListingResponsive,
           alt: 'CrediBid mobile listing page',
         },
         {
-          url: '/public/assets/CrediBid-create-page-responsive.jpg',
+          url: CrediBidCreateResponsive,
           alt: 'eCom mobile create listing page',
         },
       ],
@@ -93,23 +108,23 @@ export const useStore = create(() => ({
       url: 'https://postlyfe.netlify.app/',
       medias: [
         {
-          url: '/public/assets/Postlyfe-fullScreen.jpg',
+          url: PostlyfeFullScrenn,
           alt: 'Postlyfe home',
         },
         {
-          url: '/public/assets/Postlyfe-profile.jpg',
+          url: PostlyfeProfile,
           alt: 'Postlyfe profile page',
         },
         {
-          url: '/public/assets/Postlyfe-create.jpg',
+          url: PostlyfeCreate,
           alt: 'Postlyfe create page',
         },
         {
-          url: '/public/assets/Postlyfe-login-responsive.jpg',
+          url: PostlyfeLoginResponsive,
           alt: 'Postlyfe mobile login page',
         },
         {
-          url: '/public/assets/Postlyfe-post-responsive.jpg',
+          url: PostlyfePostResponsive,
           alt: 'Postlyfe mobile post page',
         },
       ],
@@ -124,7 +139,7 @@ export const useStore = create(() => ({
       url: 'https://h-chai.github.io/Semester-Project-1/',
       medias: [
         {
-          url: '/public/assets/CommunityScienceMuseum.jpg',
+          url: CommunityScienceMuseum,
           alt: 'Community Science Museum',
         },
       ],

@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import eComFullScreen from '../../public/assets/eCom-fullScreen.jpg';
 
 export const useStore = create(() => ({
   projects: [
@@ -17,7 +18,7 @@ export const useStore = create(() => ({
       url: 'https://reactecom-project.netlify.app/',
       medias: [
         {
-          url: '/public/assets/eCom-fullScreen.jpg',
+          url: { eComFullScreen },
           alt: 'eCom home',
         },
         {

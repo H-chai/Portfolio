@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
-import scrollDown from '../assets/scrolldown.svg';
-import eCom from '../assets/eCom.svg';
-import CrediBid from '../assets/CrediBid.svg';
-import Postlyfe from '../assets/Postlyfe.svg';
-import ScienceMuseum from '../assets/ScienceMuseum.svg';
+import scrollDown from '../../public/assets/scrolldown.svg';
+import eCom from '../../public/assets/eCom.svg';
+import CrediBid from '../../public/assets/CrediBid.svg';
+import Postlyfe from '../../public/assets/Postlyfe.svg';
+import ScienceMuseum from '../../public/assets/ScienceMuseum.svg';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 import { Link } from 'react-router-dom';
 import mainStyles from '../styles/HomeMain.module.css';
 import projectStyles from '../styles/HomeProject.module.css';
 import contactStyles from '../styles/HomeContact.module.css';
-import Profile from '../assets/profile.svg';
+import Profile from '../../public/assets/profile.svg';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useScroll } from '../contexts/ScrollContext';
 

@@ -18,7 +18,7 @@ export const useStore = create(() => ({
       url: 'https://reactecom-project.netlify.app/',
       medias: [
         {
-          url: { eComFullScreen },
+          url: eComFullScreen,
           alt: 'eCom home',
         },
         {

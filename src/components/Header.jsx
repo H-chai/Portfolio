@@ -50,7 +50,7 @@ export function Header() {
       <nav className={styles.navMenu}>
         <ul className={styles.navMenuList}>
           <li onClick={handleScrollToProjects}>PROJECTS</li>
-          <li>ABOUT</li>
+          {/* <li>ABOUT</li> */}
           <li onClick={handleScrollToContact}>CONTACT</li>
         </ul>
       </nav>
@@ -68,7 +68,7 @@ export function Header() {
       >
         <ul>
           <li onClick={handleScrollToProjects}>PROJECTS</li>
-          <li>ABOUT</li>
+          {/* <li>ABOUT</li> */}
           <li onClick={handleScrollToContact}>CONTACT</li>
         </ul>
       </nav>

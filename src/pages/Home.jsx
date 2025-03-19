@@ -167,7 +167,7 @@ export function Home() {
                   >
                     PROJECTS
                   </li>
-                  <li className={contactStyles.contactNavListItem}>ABOUT</li>
+                  {/* <li className={contactStyles.contactNavListItem}>ABOUT</li> */}
                   <li
                     className={contactStyles.contactNavListItem}
                     onClick={scrollToContact}

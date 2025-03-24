@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
-export function Project() {
+function Project() {
   const { id } = useParams();
   const getProjectById = useStore.getState().getProjectById;
   const project = getProjectById(id);
@@ -98,3 +98,5 @@ export function Project() {
     </div>
   );
 }
+
+export default Project;
